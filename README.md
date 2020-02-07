@@ -1,6 +1,9 @@
 # log_analyzer
-This is a C++ project for my CMP2003 (Data Structures and Algorithms) class.
+This is a C++ project for my Data Structures and Algorithms class.
 
 # Execution
-Executable file and the log file should be in the same folder.
-After you run the executable, program will find and sort top 10 web pages.
+- All files must be in the same folder.
+- Compile and run **Source.cpp**. 
+- After run, program will find and sort top 10 web pages according to its occurance by their name, which are in **access_log** file.
+
+_Note:_ If you generate an executable file, it should be in the same directory with the **access_log** file.
