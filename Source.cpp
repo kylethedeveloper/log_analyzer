@@ -1,11 +1,11 @@
 #include <fstream>
 #include <ctime>
-#include "linkedlist.h"
+#include "Linkedlist.h"
 #include "Hashtable.h"
 using namespace std;
 
 
-int main() 
+int main()
 {
 
 	time_t start = time(0);
@@ -15,7 +15,7 @@ int main()
 	ifstream file;
 	file.open("access_log"); //open the file
 
-	if (file.is_open()) 
+	if (file.is_open())
 	{
 		while (file >> word) //reading word by word
 		{
@@ -26,7 +26,7 @@ int main()
 		}
 		names.topten(); //print top ten
 	}
-	else 
+	else
 	{
 		cout << "Error ! File can not be opened !" << endl; //error message
 	}

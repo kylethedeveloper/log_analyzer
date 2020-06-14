@@ -1,11 +1,11 @@
-#include "linkedlist.h" 
+#include "Linkedlist.h"
 
-LinkedList::LinkedList() // The constructer of Linkedlist 
-{ 
+LinkedList::LinkedList() // The constructer of Linkedlist
+{
 	first = nullptr;
 	last = nullptr;
 	size = 0;
-} 
+}
 
 LinkedList::~LinkedList() // The deconstructer of Linkedlist
 {
@@ -18,11 +18,11 @@ LinkedList::~LinkedList() // The deconstructer of Linkedlist
 	}
 	last = nullptr;
 	size = 0;
-	
+
 }
 
 Node * LinkedList::getFirst() // Returns the first member of Linkedlist
-{ 
+{
 	return first;
 }
 
@@ -57,7 +57,7 @@ void LinkedList::swap(Node * a, Node * b) // Swaps two nodes position in a Linke
 			first = b;
 			b->llink = first;
 		}
-		
+
 	}
 	else if (b->rlink == nullptr) // If b is the last node of the Linkedlist
 	{
@@ -68,7 +68,7 @@ void LinkedList::swap(Node * a, Node * b) // Swaps two nodes position in a Linke
 		a->llink = b;
 		last = a;
 	}
-	else 
+	else
 	{
 		a->rlink = b->rlink;
 		b->rlink->llink = a;
@@ -106,7 +106,7 @@ void LinkedList::insert(string s) // Inserts a element to the Linkedlist
 				temp->count++;
 				while (btemp->count < temp->count) // Uses swap function to keep the Linkedlist sorted
 				{
-					swap(btemp, temp); 
+					swap(btemp, temp);
 					if (temp->llink != temp)
 					{
 						btemp = temp->llink;
@@ -118,7 +118,7 @@ void LinkedList::insert(string s) // Inserts a element to the Linkedlist
 			btemp = temp;
 			temp = temp->rlink;
 		}
-		if (found == false) // If node is not found insert a new node to last 
+		if (found == false) // If node is not found insert a new node to last
 		{
 			Node *valuenode = new Node;
 
@@ -144,4 +144,3 @@ Node::Node() // The constructer of the node
 	count = 0;
 	rlink = llink = nullptr;
 }
-
